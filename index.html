@@ -4,9 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Rock+3D&family=Rye&family=Shizuru&family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <script src="index.js"></script>
+    <h1 id="title" class="box-shadow border">Rock Paper Scissors</h1>
+    <h3 id="sub-title">Let's play our childhood favorite game.</h3>
+
+    <div class="selections">
+      <div>
+        <p>You Pick</p>
+        <div id="user-pick" class="box-shadow"></div>
+      </div>
+      <div>
+        <div class="rules">
+          <p>Rules</p>
+          <ul>
+            <li>Pick one from rock, paper and scissors.</li>
+            <li>Rock beats Scissors. Paper beats Rock. Scissors beat Paper.</li>
+            <li>Player who reaches 5 points first wins the game.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <p>I Pick</p>
+        <div id="computer-pick" class="box-shadow"></div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <div>
+        <div id="user-score">0</div>
+        <p>Your Score</p>
+      </div>
+      <div id="result"></div>
+      <div>
+        <div id="computer-score">0</div>
+        <p>My Score</p>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <div role="button" class="btn">
+        <img
+          src="images/rock.png"
+          alt="Nature vector created by macrovector - www.freepik.com"
+          id="rock"
+          data-key="rock"
+        />
+      </div>
+      <div role="button" class="btn">
+        <img
+          src="images/paper.png"
+          alt="Certificate vector created by upklyak - www.freepik.com"
+          id="paper"
+          data-key="paper"
+        />
+      </div>
+      <div role="button" class="btn">
+        <img
+          src="images/scissors.png"
+          alt="Cartoon vector created by pch.vector - www.freepik.com"
+          id="scissors"
+          data-key="scissors"
+        />
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://www.freepik.com" target="_blank">Images from Freepik</a>
+    </footer>
+    <script src="index.js" defer></script>
   </body>
 </html>

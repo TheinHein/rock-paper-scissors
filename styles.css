@@ -1,0 +1,233 @@
+html {
+  box-sizing: border-box;
+  letter-spacing: 3px;
+  font-family: "Shizuru", cursive;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #940708;
+  color: #ffc800;
+  font-size: 1.2em;
+}
+
+.border {
+  border-radius: 10px;
+  border: 5px ridge #684848;
+  padding: 10px 3px;
+  margin: 0 50px;
+}
+
+#title {
+  font-family: "Rock 3D", cursive;
+  font-size: 1.8em;
+  padding: 0 40px 12px;
+  margin: 15px 0 15px 0;
+}
+.box-shadow {
+  background-color: #6b0909;
+  -webkit-box-shadow: 0px 5px 15px 5px #000000;
+  box-shadow: 0px 5px 15px 5px #000000;
+  text-shadow: 0px 0px 0 rgb(227, 172, 0), 0px 1px 0 rgb(198, 143, 0),
+    0px 2px 0 rgb(170, 115, 0), 0px 3px 0 rgb(142, 87, 0),
+    0px 4px 0 rgb(113, 58, 0), 0px 5px 0 rgb(85, 30, 0), 0px 6px 0 rgb(57, 2, 0),
+    0px 7px 6px rgba(8, 8, 8, 0.25), 0px 7px 1px rgba(8, 8, 8, 0.5),
+    0px 0px 6px rgba(8, 8, 8, 0.2);
+}
+
+#sub-title {
+  margin: 0;
+}
+
+.rules li {
+  font-size: 0.7em;
+  text-align: left;
+  margin: 1rem;
+}
+
+.selections,
+.scores,
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 800px;
+}
+.scores {
+  width: 720px;
+}
+#user-pick,
+#computer-pick {
+  width: 200px;
+  height: 155px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+.animate-score {
+  animation: score 2s ease 0s 1 normal forwards;
+}
+#rock {
+  width: 180px;
+  height: auto;
+}
+
+#paper {
+  width: 60px;
+  height: auto;
+}
+
+#scissors {
+  width: 145px;
+  height: auto;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn:hover {
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+.announcement {
+  z-index: 1;
+  margin: auto;
+  height: 50px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.bg {
+  background-color: rgb(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+}
+.win {
+  background-image: url("images/win.webp");
+  background-position: 50% 18%;
+}
+.lose {
+  background-image: url("images/lose.webp");
+  background-position: 50% 5%;
+}
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6em;
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+  width: 100%;
+  background-color: black;
+}
+
+footer a {
+  margin-right: 200px;
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: red;
+}
+ul {
+  list-style: circle;
+  margin: 0 25px;
+  padding: 0 0 0 25px;
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: rotate(10deg);
+  }
+
+  24% {
+    animation-timing-function: ease-in;
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: rotate(10deg);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: rotate(5deg);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes score {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
